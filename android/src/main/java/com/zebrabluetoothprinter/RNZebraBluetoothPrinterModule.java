@@ -408,9 +408,10 @@ public class RNZebraBluetoothPrinterModule extends ReactContextBaseJavaModule im
           configLabel = printLabel.getBytes();
         
       } else if (printerLanguage == PrinterLanguage.CPCL) {
-        String cpclConfigLabel = "! 0 200 200 406 1\r\n" + "ON-FEED IGNORE\r\n" + "BOX 20 20 380 380 8\r\n"
+        // String cpclConfigLabel = "! 0 200 200 406 1\r\n" + "ON-FEED IGNORE\r\n" + "BOX 20 20 380 380 8\r\n"
             + "T 0 6 137 177 TEST\r\n" + "PRINT\r\n";
-        configLabel = cpclConfigLabel.getBytes();
+        // configLabel = cpclConfigLabel.getBytes();
+        configLabel = printLabel.getBytes();
       }
     } catch (ConnectionException e) {
       Log.d("Connection err", e.toString());
